@@ -19,10 +19,15 @@ namespace QuickReturnList
 
             SetContentView(Resource.Layout.Main);
 
+            string[] array = new string[] { "Android 1", "Android 2", "Android 3", "Android 4", "Android 5", "Android 6", "Android 7", "Android 8", "Android 9", "Android", "Android", "Android", "Android", "Android", "Android", "Android" };
+            FindViewById(Resource.Id.sticky).Click += (s, e) =>
+            {
+                mListView.Adapter = new ArrayAdapter<string>(this, Resource.Layout.list_item, Resource.Id.text1, array);
+            };
+
             mListView = FindViewById<QuickReturnListView>(Android.Resource.Id.List);
             mListView.Init(FindViewById(Resource.Id.sticky));
-            
-            string[] array = new string[] { "Android 1", "Android 2", "Android 3", "Android 4", "Android 5", "Android 6", "Android 7", "Android 8", "Android 9", "Android", "Android", "Android", "Android", "Android", "Android", "Android" };
+
             //mListView.Adapter = new ArrayAdapter<string>(this, Resource.Layout.list_item, Resource.Id.text1, array);
         }
     }

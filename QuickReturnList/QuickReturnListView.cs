@@ -55,8 +55,10 @@ namespace QuickReturnList
                 mQuickReturnHeight = quickReturnView.Height;
                 mHeaderPH.LayoutParameters.Height = mQuickReturnHeight;
                 this.computeScrollY();
-                mCachedVerticalScrollRange = mHeight;
             };
+
+            this.ChildViewAdded += (s, e) => { this.computeScrollY(); };
+            this.ChildViewRemoved += (s, e) => { this.computeScrollY(); };
 
             this.Scroll += (s, e) =>
             {
@@ -174,6 +176,9 @@ namespace QuickReturnList
         protected virtual void computeScrollY()
         {
             mHeight = 0;
+            if (Adapter == null)
+                return;
+            
             mItemCount = Adapter.Count;
             if (mItemOffsetY == null)
                 mItemOffsetY = new int[mItemCount];
@@ -186,6 +191,7 @@ namespace QuickReturnList
                 Console.WriteLine(mHeight);
             }
             scrollIsComputed = true;
+            mCachedVerticalScrollRange = mHeight;
         }
 
         protected virtual int ComputedScrollY
