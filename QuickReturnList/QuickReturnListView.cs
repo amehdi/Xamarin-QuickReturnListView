@@ -52,13 +52,13 @@ namespace QuickReturnList
 
             this.ViewTreeObserver.GlobalLayout += delegate
             {
-                mQuickReturnHeight = quickReturnView.Height;
-                mHeaderPH.LayoutParameters.Height = mQuickReturnHeight;
+                if (mQuickReturnHeight == 0)
+                {
+                    mQuickReturnHeight = quickReturnView.Height;
+                    mHeaderPH.LayoutParameters.Height = mQuickReturnHeight;
+                }
                 this.computeScrollY();
             };
-
-            this.ChildViewAdded += (s, e) => { this.computeScrollY(); };
-            this.ChildViewRemoved += (s, e) => { this.computeScrollY(); };
 
             this.Scroll += (s, e) =>
             {
@@ -66,9 +66,11 @@ namespace QuickReturnList
                 int translationY = 0;
 
                 if (this.scrollIsComputed)
+                {
                     mScrollY = this.ComputedScrollY;
-
-                rawY = mHeaderPH.Top - Math.Min(mCachedVerticalScrollRange - this.Height, mScrollY);
+                    if (mCachedVerticalScrollRange > mQuickReturnHeight)
+                        rawY = mHeaderPH.Top - Math.Min(mCachedVerticalScrollRange - this.Height, mScrollY);
+                }
 
                 switch (mState)
                 {
