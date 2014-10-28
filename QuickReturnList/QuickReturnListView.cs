@@ -95,7 +95,7 @@ namespace QuickReturnList
                             translationY = 0;
                             mMinRawY = rawY - mQuickReturnHeight;
                         }
-                        else if (rawY > 0)
+                        else if (rawY >= 0)
                         {
                             mState = STATE_ONSCREEN;
                             translationY = rawY;
@@ -144,7 +144,7 @@ namespace QuickReturnList
                             translationY = 0;
                             mMinRawY = rawY - mQuickReturnHeight;
                         }
-                        else if (rawY > 0)
+                        else if (rawY >= 0)
                         {
                             mState = STATE_ONSCREEN;
                             translationY = rawY;

@@ -28,6 +28,25 @@ namespace QuickReturnList
 		{
 		}
 		
+		public partial class Animation
+		{
+			
+			// aapt resource value: 0x7f040000
+			public const int slide_in_bottom = 2130968576;
+			
+			// aapt resource value: 0x7f040001
+			public const int slide_out_bottom = 2130968577;
+			
+			static Animation()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Animation()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -44,14 +63,14 @@ namespace QuickReturnList
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int sticky_item = 2130968577;
+			// aapt resource value: 0x7f050001
+			public const int sticky_item = 2131034113;
 			
-			// aapt resource value: 0x7f040002
-			public const int sticky_item_text = 2130968578;
+			// aapt resource value: 0x7f050002
+			public const int sticky_item_text = 2131034114;
 			
-			// aapt resource value: 0x7f040000
-			public const int top_item = 2130968576;
+			// aapt resource value: 0x7f050000
+			public const int top_item = 2131034112;
 			
 			static Color()
 			{
@@ -66,14 +85,14 @@ namespace QuickReturnList
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f050002
-			public const int page_margin = 2131034114;
+			// aapt resource value: 0x7f060002
+			public const int page_margin = 2131099650;
 			
-			// aapt resource value: 0x7f050000
-			public const int sticky_height = 2131034112;
+			// aapt resource value: 0x7f060000
+			public const int sticky_height = 2131099648;
 			
-			// aapt resource value: 0x7f050001
-			public const int top_height = 2131034113;
+			// aapt resource value: 0x7f060001
+			public const int top_height = 2131099649;
 			
 			static Dimension()
 			{
@@ -104,11 +123,14 @@ namespace QuickReturnList
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int sticky = 2131230721;
+			// aapt resource value: 0x7f090002
+			public const int slide = 2131296258;
 			
-			// aapt resource value: 0x7f080000
-			public const int text1 = 2131230720;
+			// aapt resource value: 0x7f090001
+			public const int sticky = 2131296257;
+			
+			// aapt resource value: 0x7f090000
+			public const int text1 = 2131296256;
 			
 			static Id()
 			{
@@ -142,23 +164,23 @@ namespace QuickReturnList
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f060003
-			public const int animation_fragment = 2131099651;
+			// aapt resource value: 0x7f070003
+			public const int animation_fragment = 2131165187;
 			
-			// aapt resource value: 0x7f060000
-			public const int app_name = 2131099648;
+			// aapt resource value: 0x7f070000
+			public const int app_name = 2131165184;
 			
-			// aapt resource value: 0x7f060002
-			public const int default_fragment = 2131099650;
+			// aapt resource value: 0x7f070002
+			public const int default_fragment = 2131165186;
 			
-			// aapt resource value: 0x7f060004
-			public const int footer = 2131099652;
+			// aapt resource value: 0x7f070004
+			public const int footer = 2131165188;
 			
-			// aapt resource value: 0x7f060005
-			public const int footer_fragment = 2131099653;
+			// aapt resource value: 0x7f070005
+			public const int footer_fragment = 2131165189;
 			
-			// aapt resource value: 0x7f060001
-			public const int title_activity_main = 2131099649;
+			// aapt resource value: 0x7f070001
+			public const int title_activity_main = 2131165185;
 			
 			static String()
 			{
@@ -173,11 +195,11 @@ namespace QuickReturnList
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int Item = 2131165184;
+			// aapt resource value: 0x7f080000
+			public const int Item = 2131230720;
 			
-			// aapt resource value: 0x7f070001
-			public const int Item_Sticky = 2131165185;
+			// aapt resource value: 0x7f080001
+			public const int Item_Sticky = 2131230721;
 			
 			static Style()
 			{
